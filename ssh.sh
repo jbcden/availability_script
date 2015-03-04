@@ -1,5 +1,5 @@
 #!/bin/bash
-source .publics
+source .secrets
 
 machine=`head -1 $APP_PATH/final | awk '{print $2}'`
 
