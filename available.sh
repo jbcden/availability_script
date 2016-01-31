@@ -12,10 +12,9 @@ trap "exit 0" SIGINT
 counter=0
 
 for ((i = 0 ;i < $mach_size;i++)); do
-#echo "pandas"
-#echo $counter
+
 if [ ! -z "${machines[$i]}" ]
-then 
+then
 	# parentheses surrounding a command open a subshell
 	# the ret val of subshell can be seen in $? as usual
 	(./expect_available.sh ${machines[$i]} $PASSWORD)
